@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZACHARY WERAKSO</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: black;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 2rem;
+        }
+        #header {
+            background-color: black;
+            font-size: 4rem;
+            text-align: center;
+        }
+        .header-container {
+            position: relative;
+            display: inline-block;
+        }
+        .moving-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, blue, yellow, green, red);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            z-index: -2;
+            opacity: 0.2;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .social-icons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-left: 10px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+        .legend a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .legend a.active {
+            color: white;
+        }
+        .arrow {
+            position: absolute;
+            bottom: 150px; /* Moved up */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translate(-50%, 0);}
+            40% {transform: translate(-50%, -30px);}
+            60% {transform: translate(-50%, -15px);}
+        }
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-options a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .contact-options a:hover {
+            color: #ddd;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <div class="moving-bg"></div>
+    
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="legend">
+        <a href="#header">Home</a>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#current-work">Current Work</a>
+        <a href="#past-experience">Past Experience</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="header" class="section">
+        <div class="header-container">
+            <h1>ZACHARY WERAKSO</h1>
+        </div>
+        <div class="arrow">&#8595;</div>
+    </div>
+
+    <div id="about" class="section">
+        <h2>About me</h2>
+        <p>I am a Digital Marketing Specialist currently working in healthtech. I am an ambitious individual always seeking to learn, currently doing so in the world of coding. My specialties and expertise lie in creating engaging websites, developing a seamless digital experience for customers, automating marketing journeys, SEO and campaign optimisation.</p>
+    </div>
+
+    <div id="expertise" class="section">
+        <h2>Expertise</h2>
+        <p>My expertise spans various areas of digital marketing, including SEO, content marketing, social media strategy, and data analytics. I specialize in creating comprehensive marketing campaigns that drive engagement and conversions. My technical skills include proficiency in Google Analytics, various CMS platforms, and basic web development.</p>
+    </div>
+
+    <div id="current-work" class="section">
+        <h2>Current Work</h2>
+        <p>Currently, I'm working as a Digital Marketing Specialist in the healthtech industry. My role involves developing and implementing digital marketing strategies to increase brand awareness and drive user acquisition. I'm also focusing on optimizing our website for search engines and improving our overall digital presence.</p>
+    </div>
+
+    <div id="past-experience" class="section">
+        <h2>Past Experience</h2>
+        <p>Prior to my current role, I worked in various marketing positions across different industries. This diverse experience has given me a broad perspective on marketing strategies and has honed my ability to adapt to different target audiences and market conditions. I've worked on projects ranging from small local businesses to large multinational corporations.</p>
+    </div>
+
+    <div id="recommendations" class="section">
+        <h2>Recommendations</h2>
+        <p>"Zachary is an exceptional digital marketer with a keen eye for detail and a strategic mindset. His ability to analyze data and turn insights into actionable marketing plans is truly impressive." - Jane Doe, Marketing Director</p>
+        <p>"Working with Zachary was a game-changer for our online presence. His expertise in SEO and content strategy significantly improved our website traffic and user engagement." - John Smith, CEO</p>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-options">
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="mailto:your.email@example.com">Email</a>
+        </div>
+    </div>
+
+    <script>
+        const header = document.querySelector('#header h1');
+        const legend = document.querySelector('.legend');
+        const legendLinks = legend.querySelectorAll('a');
+        const paragraphs = document.querySelectorAll('p');
+        const arrow = document.querySelector('.arrow');
+
+        document.addEventListener('mousemove', function(e) {
+            const mouseX = e.clientX / window.innerWidth - 0.5;
+            const mouseY = e.clientY / window.innerHeight - 0.5;
+            header.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+        });
+
+        function updateActiveLegendItem() {
+            const scrollPosition = window.scrollY;
+            legendLinks.forEach(link => {
+                const sectionElement = document.querySelector(link.getAttribute('href'));
+                const sectionTop = sectionElement.offsetTop - 100; // Offset to trigger earlier
+                const sectionBottom = sectionTop + sectionElement.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        legendLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        function checkFade() {
+            paragraphs.forEach(p => {
+                const pPosition = p.getBoundingClientRect().top;
+                if (pPosition < window.innerHeight - 200) { // Changed to 200px from bottom
+                    p.classList.add('fade-in');
+                }
+            });
+        }
+
+        arrow.addEventListener('click', function() {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', () => {
+            updateActiveLegendItem();
+            checkFade();
+        });
+        
+        // Initial check
+        updateActiveLegendItem();
+        checkFade();
+    </script>
+</body>
+</html>
